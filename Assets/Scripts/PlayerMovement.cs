@@ -54,7 +54,6 @@ public class PlayerMovement : MonoBehaviour
         if (!Input.GetKey(KeyCode.LeftShift) && isGrounded) {
             sprintMultiplier = 1;
         }
-        print(isGrounded);
         
 
         //right is the red Axis, foward is the blue axis
