@@ -2927,6 +2927,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2059177571580100916}
   - component: {fileID: 5953384753387217497}
+  - component: {fileID: 3450794535457494576}
   m_Layer: 0
   m_Name: Test Char 2 (Can change outfit)
   m_TagString: Untagged
@@ -3004,6 +3005,29 @@ MonoBehaviour:
   BlinkingInterval: 1.98
   BlinkSpeed: 0.8
   ExpressionChangeSpeed: 5
+--- !u!136 &3450794535457494576
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3711065655101365474}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.3
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &3763021341628721608
 GameObject:
   m_ObjectHideFlags: 0
