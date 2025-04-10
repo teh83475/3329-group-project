@@ -1,8 +1,8 @@
 using UnityEngine;
 using TMPro;
+
 public class TriggerCheck : MonoBehaviour
 {
-    private bool isWin = false;
     public TextMeshProUGUI youWinText;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -25,6 +25,11 @@ public class TriggerCheck : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Debug.Log("Trigger Hit");
+
+            PlayerMovement playerMovement = other.gameObject.GetComponent<PlayerMovement>();
+            if (playerMovement != null) {
+                playerMovement.setIsGameEnd(true);
+            }
             if (youWinText != null)
             {
                 youWinText.gameObject.SetActive(true);
