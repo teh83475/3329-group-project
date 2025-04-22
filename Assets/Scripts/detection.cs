@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GuardianDetection : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class GuardianDetection : MonoBehaviour
     public string playerTag = "Player";
 
     public TextMeshProUGUI youLoseText;
+    public Button restartButton;
 
     void Update()
     {
@@ -46,7 +48,10 @@ public class GuardianDetection : MonoBehaviour
         }
         if (youLoseText != null)
         {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
             youLoseText.gameObject.SetActive(true);
+            restartButton.gameObject.SetActive(true);
         }
     }
 
