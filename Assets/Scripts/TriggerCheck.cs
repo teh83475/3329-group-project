@@ -25,6 +25,7 @@ public class TriggerCheck : MonoBehaviour
             PlayerMovement playerMovement = other.gameObject.GetComponent<PlayerMovement>();
             if (playerMovement != null) {
                 playerMovement.setIsGameEnd(true);
+                FindObjectsByType<Timer>(FindObjectsSortMode.None)[0].FreezeTime();
             }
             if (youWinText != null)
             {
