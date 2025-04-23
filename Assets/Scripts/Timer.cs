@@ -5,7 +5,7 @@ using System;
 public class Timer : MonoBehaviour
 {
     public TextMeshProUGUI timerText;
-    private Boolean timeFreezed = false;
+    private bool timeFreezed = false;
 
     // Update is called once per frame
     void Update()

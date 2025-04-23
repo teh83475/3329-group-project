@@ -45,6 +45,7 @@ public class GuardianDetection : MonoBehaviour
         if (playerMovement != null)
         {
             playerMovement.setIsGameEnd(true);
+            FindObjectsByType<Timer>(FindObjectsSortMode.None)[0].FreezeTime();
         }
         if (youLoseText != null)
         {
