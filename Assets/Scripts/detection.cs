@@ -42,6 +42,8 @@ public class GuardianDetection : MonoBehaviour
     {
         Debug.Log("Player detected! Game Over.");
         PlayerMovement playerMovement = GameObject.FindGameObjectWithTag(playerTag).GetComponent<PlayerMovement>();
+        Timer timer = GameObject.FindGameObjectWithTag("Timer").GetComponent<Timer>();
+        timer.FreezeTime();
         if (playerMovement != null)
         {
             playerMovement.setIsGameEnd(true);
