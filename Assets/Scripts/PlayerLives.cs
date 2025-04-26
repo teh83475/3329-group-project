@@ -19,6 +19,7 @@ public class PlayerLives : MonoBehaviour
 
     [Header("Sound Effects")]
     public AudioSource audioSource;
+    public AudioSource bgmSource;
     public AudioClip loseLifeSound;
     public AudioClip gameOverSound;
 
@@ -68,10 +69,14 @@ public class PlayerLives : MonoBehaviour
 
             if (youLoseText != null)
             { // Play game over sound
+                invincibleTime = 9999;
                 if (gameOverSound != null)
                 {
                     audioSource.PlayOneShot(gameOverSound);
                 }
+                bgmSource.Stop();
+
+
                 youLoseText.gameObject.SetActive(true);
                 Cursor.visible = true;
                 Cursor.lockState = CursorLockMode.None;

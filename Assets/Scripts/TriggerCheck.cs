@@ -4,6 +4,7 @@ using TMPro;
 public class TriggerCheck : MonoBehaviour
 {
     public AudioSource winAudioSource;
+    public AudioSource bgmSource;
     public AudioClip winSound;
     public TextMeshProUGUI youWinText;
 
@@ -36,6 +37,7 @@ public class TriggerCheck : MonoBehaviour
                 {
                     winAudioSource.PlayOneShot(winSound);
                 }
+                bgmSource.Stop();
                 youWinText.gameObject.SetActive(true);
             }
         }
