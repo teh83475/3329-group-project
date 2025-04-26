@@ -13,6 +13,9 @@ public class PlayerLives : MonoBehaviour
     private Vector3 originalCameraOffset;
     public TextMeshProUGUI youLoseText;
     public Button restartButton;
+    public float invincibleDuration = 1.5f;
+
+    private float invincibleTime = 0;
 
    
 
@@ -24,11 +27,24 @@ public class PlayerLives : MonoBehaviour
         respawnRotation = transform.rotation;
         UpdateLivesDisplay();
     }
-    
-    
+
+    private void Update()
+    {
+        if (invincibleTime > 0)
+        {
+            
+            invincibleTime -= Time.deltaTime;
+            if (invincibleTime < 0) invincibleTime= 0;
+            Camera.main.fieldOfView = Mathf.Lerp(60, 45, invincibleTime/ invincibleDuration);
+        }
+    }
+
+
 
     public void LoseLife()
     {
+        if (invincibleTime > 0) return;
+
         if (currentLives <= 0) return;
         currentLives--;
         UpdateLivesDisplay();
@@ -54,8 +70,8 @@ public class PlayerLives : MonoBehaviour
         }
         else
         {
-            // Reset player position 
-            ResetPlayer();
+            // give invincibility
+            invincibleTime = invincibleDuration;
         }
     }
 
@@ -87,7 +103,7 @@ public class PlayerLives : MonoBehaviour
     {
         // Add visual feedback like blinking
         GetComponent<Collider>().enabled = false;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(invincibleDuration);
         GetComponent<Collider>().enabled = true;
     }
 
