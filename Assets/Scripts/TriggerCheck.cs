@@ -3,6 +3,8 @@ using TMPro;
 
 public class TriggerCheck : MonoBehaviour
 {
+    public AudioSource winAudioSource;
+    public AudioClip winSound;
     public TextMeshProUGUI youWinText;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -29,7 +31,11 @@ public class TriggerCheck : MonoBehaviour
                 playerMovement.setIsGameEnd(true);
             }
             if (youWinText != null)
-            {
+            {// Play win sound
+                if (winSound != null)
+                {
+                    winAudioSource.PlayOneShot(winSound);
+                }
                 youWinText.gameObject.SetActive(true);
             }
         }
