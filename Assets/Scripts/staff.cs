@@ -7,7 +7,7 @@ public class GuardianSpin : MonoBehaviour
     public float startTime = 0;
     public float initAngle = 0;
 
-    private void Awake()
+    private void Start()
     {
         transform.rotation = Quaternion.Euler(0, initAngle, 0);
     }

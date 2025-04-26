@@ -2928,8 +2928,9 @@ GameObject:
   - component: {fileID: 2059177571580100916}
   - component: {fileID: 5953384753387217497}
   - component: {fileID: 3450794535457494576}
+  - component: {fileID: 5224698909587984197}
   m_Layer: 0
-  m_Name: Test Char 2 (Can change outfit)
+  m_Name: pedestrian 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2945,8 +2946,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.645187, y: 0.00009985706, z: -1.6779597}
-  m_LocalScale: {x: 1.1, y: 1.1, z: 1.1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1710441270251655169}
   - {fileID: 1159243343573284737}
@@ -3028,6 +3029,18 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &5224698909587984197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3711065655101365474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6ec08c66a610004cbf32a8d2ccc01f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3763021341628721608
 GameObject:
   m_ObjectHideFlags: 0
@@ -4289,7 +4302,7 @@ Animator:
   m_GameObject: {fileID: 5468859742235309360}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 9731d8c3a1a6c1d48b87cfa1967505b2, type: 3}
-  m_Controller: {fileID: 9100000, guid: e181921bcbf3a504f8b1ee0667d03cc9, type: 2}
+  m_Controller: {fileID: 9100000, guid: d5eefa1c84d13d44b85dfe8499a4dcc4, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -6621,7 +6634,7 @@ Animator:
   m_GameObject: {fileID: 9108852009862943324}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: becf17e664e3f674aaf58f124706786c, type: 3}
-  m_Controller: {fileID: 22100000, guid: 3868acb69ac56f648b9309fc6f11f3b0, type: 2}
+  m_Controller: {fileID: 9100000, guid: d5eefa1c84d13d44b85dfe8499a4dcc4, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1

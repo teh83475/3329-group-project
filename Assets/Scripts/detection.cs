@@ -24,15 +24,15 @@ public class GuardianDetection : MonoBehaviour
         Vector3 directionToPlayer = player.transform.position - transform.position;
         float angleToPlayer = Vector3.Angle(transform.forward, directionToPlayer);
 
-        Debug.Log("hv player!");
+        //Debug.Log("hv player!");
         if (angleToPlayer < visionAngle / 2f)
         {
-            Debug.Log("wi thin angle!");
+            //Debug.Log("wi thin angle!");
             if (directionToPlayer.magnitude < visionRange)
             {
-                Debug.Log("within rangle!");
+                //Debug.Log("within rangle!");
                 // Player detected! 
-                Debug.Log("Game Over!");
+                //Debug.Log("Game Over!");
                 PlayerLost();
             }
         }
@@ -40,7 +40,7 @@ public class GuardianDetection : MonoBehaviour
 
     public void PlayerLost()
     {
-        Debug.Log("Player detected! Game Over.");
+        //Debug.Log("Player detected! Game Over.");
         PlayerMovement playerMovement = GameObject.FindGameObjectWithTag(playerTag).GetComponent<PlayerMovement>();
         PlayerLives playerLives = playerMovement.GetComponent<PlayerLives>();
         Timer timer = GameObject.FindGameObjectWithTag("Timer").GetComponent<Timer>();

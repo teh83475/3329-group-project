@@ -6,7 +6,6 @@ public class spawnPeople : MonoBehaviour
 {
     private List<GameObject> people = new List<GameObject>();
     public GameObject[] peopleModels;
-    private float movementSpeed = 2.0f;
 
     public float spawnTime = 0.5f;
     void Start()
@@ -34,11 +33,6 @@ public class spawnPeople : MonoBehaviour
 
     void Update()
     {
-        for (int i = 0; i < people.Count; i++)
-        {
-            people[i].transform.Translate(Vector3.back *Time.deltaTime* movementSpeed, Space.World) ;
-        }
-  
     }
 }
 
