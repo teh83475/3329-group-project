@@ -38,23 +38,32 @@ public class GuardianDetection : MonoBehaviour
         }
     }
 
-    void PlayerLost()
+    public void PlayerLost()
     {
         Debug.Log("Player detected! Game Over.");
         PlayerMovement playerMovement = GameObject.FindGameObjectWithTag(playerTag).GetComponent<PlayerMovement>();
+        PlayerLives playerLives = playerMovement.GetComponent<PlayerLives>();
         Timer timer = GameObject.FindGameObjectWithTag("Timer").GetComponent<Timer>();
-        timer.FreezeTime();
-        if (playerMovement != null)
+       
+        if (playerLives != null)
         {
-            playerMovement.setIsGameEnd(true);
-            FindObjectsByType<Timer>(FindObjectsSortMode.None)[0].FreezeTime();
+            playerLives.LoseLife();
         }
-        if (youLoseText != null)
+        else // Fallback to original behavior if no lives system
         {
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
-            youLoseText.gameObject.SetActive(true);
-            restartButton.gameObject.SetActive(true);
+            timer.FreezeTime();
+            if (playerMovement != null)
+            {
+                playerMovement.setIsGameEnd(true);
+                FindObjectsByType<Timer>(FindObjectsSortMode.None)[0].FreezeTime();
+            }
+            if (youLoseText != null)
+            {
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.None;
+                youLoseText.gameObject.SetActive(true);
+                restartButton.gameObject.SetActive(true);
+            }
         }
     }
 

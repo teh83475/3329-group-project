@@ -90,6 +90,10 @@ public class PlayerMovement : MonoBehaviour
  
         controller.Move(velocity * Time.deltaTime);
     }
+    public void ResetVelocity()
+    {
+        velocity = Vector3.zero;
+    }
 
     public void setIsGameEnd(bool gameEnded) {
         isGameEnd = gameEnded;
