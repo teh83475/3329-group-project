@@ -596,7 +596,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   winAudioSource: {fileID: 1259820634}
   bgmSource: {fileID: 36709434}
-  winSound: {fileID: 8300000, guid: 976bd60c20b612445991f5378456381e, type: 3}
+  winSound: {fileID: 8300000, guid: 81c1e967156c94f8d9298d54ca165e91, type: 3}
   youWinText: {fileID: 2007507224}
   finalTimeText: {fileID: 2108504299}
   restartButton: {fileID: 225884506}
@@ -6846,7 +6846,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1002561063962570797, guid: a9f18ccb122c61c4d978f65e2696ce85, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 432.141
+      value: 430.264
       objectReference: {fileID: 0}
     - target: {fileID: 1002561063962570797, guid: a9f18ccb122c61c4d978f65e2696ce85, type: 3}
       propertyPath: m_LocalRotation.w
@@ -13842,7 +13842,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1002561063962570797, guid: a9f18ccb122c61c4d978f65e2696ce85, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 408.9
+      value: 407.50397
       objectReference: {fileID: 0}
     - target: {fileID: 1002561063962570797, guid: a9f18ccb122c61c4d978f65e2696ce85, type: 3}
       propertyPath: m_LocalRotation.w
@@ -14914,7 +14914,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1002561063962570797, guid: a9f18ccb122c61c4d978f65e2696ce85, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 423.96
+      value: 422.083
       objectReference: {fileID: 0}
     - target: {fileID: 1002561063962570797, guid: a9f18ccb122c61c4d978f65e2696ce85, type: 3}
       propertyPath: m_LocalRotation.w
@@ -16405,7 +16405,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 2031451198}
-  finalTimeText: {fileID: 0}
+  youLoseText: {fileID: 1569694093}
+  restartButton: {fileID: 225884506}
+  audioSource: {fileID: 1259820634}
+  bgmSource: {fileID: 36709434}
+  loseLifeSound: {fileID: 8300000, guid: 561b823d4ed07ce4a8296eaa954e8994, type: 3}
+  gameOverSound: {fileID: 8300000, guid: c2f9c7f56542c41f990f9ed4efb0f754, type: 3}
 --- !u!4 &922405792
 Transform:
   m_ObjectHideFlags: 0
@@ -25084,7 +25089,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1002561063962570797, guid: a9f18ccb122c61c4d978f65e2696ce85, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 412.39902
+      value: 411.003
       objectReference: {fileID: 0}
     - target: {fileID: 1002561063962570797, guid: a9f18ccb122c61c4d978f65e2696ce85, type: 3}
       propertyPath: m_LocalRotation.w
@@ -29727,135 +29732,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.0003374219, y: -0.0015164018, z: 0.1922651}
     m_Extent: {x: 1.2637491, y: 1.1814425, z: 0.75292474}
   m_DirtyAABB: 0
---- !u!1 &1751599195
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 2836654080721407833, guid: 33774e4e0e7c6f640abf88e2fd0e3d0f, type: 3}
-  m_PrefabInstance: {fileID: 3265964369444766092}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1751599200}
-  - component: {fileID: 1751599199}
-  - component: {fileID: 1751599198}
-  - component: {fileID: 1751599197}
-  - component: {fileID: 1751599196}
-  m_Layer: 0
-  m_Name: WinTrigger
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1751599196
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 7434115778055199743, guid: 33774e4e0e7c6f640abf88e2fd0e3d0f, type: 3}
-  m_PrefabInstance: {fileID: 3265964369444766092}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1751599195}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f93a5c2b56036b47a1a94a351fbf0bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  winAudioSource: {fileID: 1259820634}
-  bgmSource: {fileID: 36709434}
-  winSound: {fileID: 8300000, guid: 976bd60c20b612445991f5378456381e, type: 3}
-  youWinText: {fileID: 2007507224}
-  finalTimeText: {fileID: 2108504299}
-  restartButton: {fileID: 225884506}
---- !u!136 &1751599197
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 4142966949251765780, guid: 33774e4e0e7c6f640abf88e2fd0e3d0f, type: 3}
-  m_PrefabInstance: {fileID: 3265964369444766092}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1751599195}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
---- !u!23 &1751599198
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 2744376984503634609, guid: 33774e4e0e7c6f640abf88e2fd0e3d0f, type: 3}
-  m_PrefabInstance: {fileID: 3265964369444766092}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1751599195}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: fae457712679fd14b9427660ad9420b1, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1751599199
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 8151092359298614061, guid: 33774e4e0e7c6f640abf88e2fd0e3d0f, type: 3}
-  m_PrefabInstance: {fileID: 3265964369444766092}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1751599195}
-  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1751599200
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 4981967775011746434, guid: 33774e4e0e7c6f640abf88e2fd0e3d0f, type: 3}
-  m_PrefabInstance: {fileID: 3265964369444766092}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1751599195}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.7, y: 21.072, z: 10.71}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1752323205
 GameObject:
   m_ObjectHideFlags: 0
@@ -30905,7 +30781,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   winAudioSource: {fileID: 1259820634}
   bgmSource: {fileID: 36709434}
-  winSound: {fileID: 8300000, guid: 976bd60c20b612445991f5378456381e, type: 3}
+  winSound: {fileID: 8300000, guid: 81c1e967156c94f8d9298d54ca165e91, type: 3}
   youWinText: {fileID: 2007507224}
   finalTimeText: {fileID: 2108504299}
   restartButton: {fileID: 225884506}
@@ -35352,7 +35228,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1002561063962570797, guid: a9f18ccb122c61c4d978f65e2696ce85, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 443.76
+      value: 441.88303
       objectReference: {fileID: 0}
     - target: {fileID: 1002561063962570797, guid: a9f18ccb122c61c4d978f65e2696ce85, type: 3}
       propertyPath: m_LocalRotation.w
@@ -35477,79 +35353,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1002561063962570797, guid: a9f18ccb122c61c4d978f65e2696ce85, type: 3}
   m_PrefabInstance: {fileID: 1011079698879982016}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &3265964369444766092
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2836654080721407833, guid: 33774e4e0e7c6f640abf88e2fd0e3d0f, type: 3}
-      propertyPath: m_Name
-      value: WinTrigger
-      objectReference: {fileID: 0}
-    - target: {fileID: 4981967775011746434, guid: 33774e4e0e7c6f640abf88e2fd0e3d0f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -10.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4981967775011746434, guid: 33774e4e0e7c6f640abf88e2fd0e3d0f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 21.072
-      objectReference: {fileID: 0}
-    - target: {fileID: 4981967775011746434, guid: 33774e4e0e7c6f640abf88e2fd0e3d0f, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 10.71
-      objectReference: {fileID: 0}
-    - target: {fileID: 4981967775011746434, guid: 33774e4e0e7c6f640abf88e2fd0e3d0f, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4981967775011746434, guid: 33774e4e0e7c6f640abf88e2fd0e3d0f, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4981967775011746434, guid: 33774e4e0e7c6f640abf88e2fd0e3d0f, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4981967775011746434, guid: 33774e4e0e7c6f640abf88e2fd0e3d0f, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4981967775011746434, guid: 33774e4e0e7c6f640abf88e2fd0e3d0f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4981967775011746434, guid: 33774e4e0e7c6f640abf88e2fd0e3d0f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4981967775011746434, guid: 33774e4e0e7c6f640abf88e2fd0e3d0f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7434115778055199743, guid: 33774e4e0e7c6f640abf88e2fd0e3d0f, type: 3}
-      propertyPath: bgmSource
-      value: 
-      objectReference: {fileID: 36709434}
-    - target: {fileID: 7434115778055199743, guid: 33774e4e0e7c6f640abf88e2fd0e3d0f, type: 3}
-      propertyPath: youWinText
-      value: 
-      objectReference: {fileID: 2007507224}
-    - target: {fileID: 7434115778055199743, guid: 33774e4e0e7c6f640abf88e2fd0e3d0f, type: 3}
-      propertyPath: finalTimeText
-      value: 
-      objectReference: {fileID: 2108504299}
-    - target: {fileID: 7434115778055199743, guid: 33774e4e0e7c6f640abf88e2fd0e3d0f, type: 3}
-      propertyPath: winAudioSource
-      value: 
-      objectReference: {fileID: 1259820634}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 33774e4e0e7c6f640abf88e2fd0e3d0f, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -35560,7 +35363,6 @@ SceneRoots:
   - {fileID: 1441467283}
   - {fileID: 1279696738586035791}
   - {fileID: 18527625}
-  - {fileID: 3265964369444766092}
   - {fileID: 1833905651}
   - {fileID: 44244235}
   - {fileID: 1880026501}
